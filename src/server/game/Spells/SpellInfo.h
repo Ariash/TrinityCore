@@ -559,6 +559,7 @@ class TC_GAME_API SpellInfo
         uint32 GetMaxTicks() const;
 
         uint32 CalcCastTime(uint8 level = 0, Spell* spell = nullptr) const;
+        void UpdateCastTimeForProfessionRacicalBoost(Unit const *caster, int32 &castTime) const;
         uint32 GetRecoveryTime() const;
 
         int32 CalcPowerCost(Unit const* caster, SpellSchoolMask schoolMask, Spell* spell = nullptr) const;
