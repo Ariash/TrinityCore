@@ -3375,7 +3375,7 @@ const VisualIdStruct cVIS[] =
 {
     {185, 3881, 67556, 500},    // cooking with Chef Hat.
     {182, 91, 20552, 500},      // Cultivation (Tauren Racial) & Herbalism
-    {393, 1008, 68978, 500}     // Flayer (Vorgen Racial) & Flayer
+    {393, 1008, 68978, 500}     // Flayer (Worgen Racial) & Flayer
 };
 
 void SpellInfo::UpdateCastTimeForProfessionRacicalBoost(Unit const *caster, int32 &castTime) const
