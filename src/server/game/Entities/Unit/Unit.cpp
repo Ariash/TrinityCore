@@ -9631,8 +9631,10 @@ void Unit::ModSpellCastTime(SpellInfo const* spellInfo, int32 & castTime, Spell*
         castTime = int32(float(castTime) * GetFloatValue(UNIT_MOD_CAST_SPEED));
     else if (spellInfo->HasAttribute(SPELL_ATTR0_REQ_AMMO) && !spellInfo->HasAttribute(SPELL_ATTR2_AUTOREPEAT_FLAG))
         castTime = int32(float(castTime) * m_modAttackSpeedPct[RANGED_ATTACK] * castSpeedMod);
-    else if (spellInfo->SpellVisual[0] == 3881 && HasAura(67556)) // cooking with Chef Hat.
-        castTime = 500;
+    else 
+    {
+        spellProto->UpdateCastTimeForProfessionRacicalBoost(this, castTime);
+    }
 }
 
 void Unit::ModSpellDurationTime(SpellInfo const* spellInfo, int32 & duration, Spell* spell)
